@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
 				labels[i].enabled = true;
 			}
 		}
-
+        labels[labels.Length-1].enabled = false;
 		GameDataManager.GetInstance ().IsPlaying = true;
 	}
 
@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
 		} 
 		else 
 		{
-			if(Input.GetButtonDown(0)){
+			if(Input.GetMouseButtonDown(0)){
 				Application.LoadLevel("title");
 			}
 		}
